@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBAction func unwind(_ segue: UIStoryboardSegue){
@@ -23,6 +23,8 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.placeholder = "ここに入力してください"
+        textField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,6 +33,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print(textField)
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
 
