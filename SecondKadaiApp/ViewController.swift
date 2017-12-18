@@ -16,8 +16,11 @@ class ViewController: UIViewController , UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if self.textField.text == nil{
+            print("名前未入力")
+        }
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-        resultViewController.name = textField.text!
+        resultViewController.name = self.textField.text!
     }
 
    
