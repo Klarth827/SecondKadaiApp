@@ -10,7 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UILabel!
 
     var name:String = "未入力"
     
@@ -18,7 +18,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         let result = name
-        label.text = "こんにちわ \(result)です"
+        label2.text = "こんにちわ \(result)です"
         // Do any additional setup after loading the view.
     }
 
