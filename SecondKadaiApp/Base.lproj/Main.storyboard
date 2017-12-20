@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,33 +19,41 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-iH-BKu">
-                                <rect key="frame" x="74" y="50" width="227" height="55"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cza-iH-BKu">
+                                <rect key="frame" x="36" y="40" width="248" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGD-fO-zXI">
-                                <rect key="frame" x="164" y="214" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGD-fO-zXI">
+                                <rect key="frame" x="36" y="210" width="248" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="4Fk-gn-Clm" kind="show" id="0dR-eE-a5J"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGC-Tc-KTg">
-                                <rect key="frame" x="40" y="129" width="294" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGC-Tc-KTg">
+                                <rect key="frame" x="36" y="100" width="248" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cza-iH-BKu" secondAttribute="trailing" constant="20" id="2S5-0K-qga"/>
+                            <constraint firstItem="Cza-iH-BKu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="AfH-tP-DF0"/>
+                            <constraint firstItem="Cza-iH-BKu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="GCq-kl-PsO"/>
+                            <constraint firstItem="jGD-fO-zXI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="YBN-Zm-efN"/>
+                            <constraint firstItem="OGC-Tc-KTg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="bDA-k5-qtE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jGD-fO-zXI" secondAttribute="trailing" constant="20" id="bP5-1D-1AB"/>
+                            <constraint firstItem="OGC-Tc-KTg" firstAttribute="top" secondItem="Cza-iH-BKu" secondAttribute="top" constant="60" id="ezQ-ST-vdm"/>
+                            <constraint firstItem="jGD-fO-zXI" firstAttribute="top" secondItem="OGC-Tc-KTg" secondAttribute="bottom" constant="80" id="gTt-yC-hS1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OGC-Tc-KTg" secondAttribute="trailing" constant="20" id="pIe-dR-0q0"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="textField" destination="OGC-Tc-KTg" id="pzL-61-pq8"/>
@@ -63,26 +72,32 @@
                         <viewControllerLayoutGuide type="bottom" id="Kcf-mi-wVE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zYL-Rz-ZxG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r53-1h-oWd">
-                                <rect key="frame" x="159" y="200" width="57" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r53-1h-oWd">
+                                <rect key="frame" x="36" y="140.5" width="248" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="gYt-Q0-1TA" kind="unwind" unwindAction="unwind:" id="vkx-UD-Gce"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us8-7W-kAc">
-                                <rect key="frame" x="110" y="62" width="154" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us8-7W-kAc">
+                                <rect key="frame" x="36" y="40" width="248" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Us8-7W-kAc" firstAttribute="top" secondItem="m8L-z2-gm0" secondAttribute="bottom" constant="20" id="CiG-jb-9tz"/>
+                            <constraint firstItem="Us8-7W-kAc" firstAttribute="leading" secondItem="zYL-Rz-ZxG" secondAttribute="leadingMargin" constant="20" id="Kcj-Gh-OuZ"/>
+                            <constraint firstItem="r53-1h-oWd" firstAttribute="top" secondItem="Us8-7W-kAc" secondAttribute="bottom" constant="80" id="U9v-gA-Tdv"/>
+                            <constraint firstItem="r53-1h-oWd" firstAttribute="leading" secondItem="zYL-Rz-ZxG" secondAttribute="leadingMargin" constant="20" id="gUb-6h-anr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Us8-7W-kAc" secondAttribute="trailing" constant="20" id="ile-AH-XGC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r53-1h-oWd" secondAttribute="trailing" constant="20" id="pcE-SH-AsK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="label2" destination="Us8-7W-kAc" id="pw5-I8-lzu"/>
